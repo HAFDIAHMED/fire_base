@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
+const write_email= (write)=>{
+  console.log(write);
+
+}
+
 function LoginSreen(props) {
   const [email,setEmail]= useState('');
   const [password , setPassword] = useState('');
+ 
     return (
         <View style={styles.container}>
         <View style={styles.titlecontainer}>
@@ -25,11 +31,17 @@ function LoginSreen(props) {
         </View>
         <View style={styles.btncontainer}>
   
-        <TouchableOpacity  style={styles.btn}>
-        <Text style={styles.btntext}>Login</Text>
+        <TouchableOpacity
+        
+        style={styles.btn}>
+        <Text style={styles.btntext}
+        
+        >Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btnoutline}>
-        <Text style={styles.outlinetext}>Register</Text>
+        <TouchableOpacity style={styles.btnoutline}
+       
+        >
+        <Text style={styles.outlinetext}>Regisrter</Text>
         </TouchableOpacity>
         </View>
       </View>
