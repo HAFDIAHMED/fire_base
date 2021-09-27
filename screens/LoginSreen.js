@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 function LoginSreen(props) {
+  const [email,setEmail]= useState('');
+  const [password , setPassword] = useState('');
     return (
         <View style={styles.container}>
         <View style={styles.titlecontainer}>
@@ -9,10 +11,14 @@ function LoginSreen(props) {
         </View>
         <View style={styles.inputcontainer}>
         <TextInput style={styles.input}
+        value = {email}
+        onChangeText = {text=>setEmail(text)}
          placeholder="email">
   
          </TextInput>
          <TextInput style={styles.input}
+         value={password}
+         onChangeText = {text=>setPassword(text)}
          placeholder="password">
   
          </TextInput>
@@ -93,6 +99,7 @@ const styles = StyleSheet.create({
     },
     btntext : {
       fontSize : 18,
+      color : 'white',
     },
     outlinetext : {
       fontSize : 18,

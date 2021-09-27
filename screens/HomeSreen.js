@@ -1,7 +1,13 @@
+
 import React from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/core'
 
-function HomeSreen(name) {
+
+function HomeSreen(props) {
+   
+
+    
     return (
         <View style={styles.container}>
             <Text> Welcome  to Home Screen</Text>
