@@ -12,6 +12,7 @@ export default function App() {
   const Stack = createStackNavigator();
 
   return (
+    /* here is i made screens for login and home */
     <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginSreen} />

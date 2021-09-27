@@ -4,12 +4,14 @@ import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, Vi
 import { auth } from '../firebase'
 
 const LoginScreen = () => {
+  /*states for email and password */
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const navigation = useNavigation()
 
   useEffect(() => {
+    /*useeffect is a listener for firebase */
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
         navigation.replace("Home")
@@ -20,6 +22,7 @@ const LoginScreen = () => {
   }, [])
 
   const handleSignUp = () => {
+    /*this function for handeling the process of registering to firebase with email and password */
     auth
       .createUserWithEmailAndPassword(email, password)
       .then(userCredentials => {
@@ -30,6 +33,8 @@ const LoginScreen = () => {
   }
 
   const handleLogin = () => {
+    /*this function for handeling the process of login to firebase with email and password */
+
     auth
       .signInWithEmailAndPassword(email, password)
       .then(userCredentials => {
